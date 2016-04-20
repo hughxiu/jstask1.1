@@ -24,6 +24,7 @@
        document.write("已然成灰~");
 	}
   }
+  //*********************************************************//
    function Wopen(){
     window.open('http://www.baidu.com','_blank','width=600,height=400,margin:100px auto auto 0')  
   } 
@@ -40,11 +41,41 @@
   else
     {alert("再见！");}
   }
+  //*************************************************//
+        function hidetext()  
+		{  
+		var mychar = document.getElementById("jsa").style.display="none";
+		}  
+		function showtext()  
+		{  
+		var mychar = document.getElementById("jsa").style.display="block";
+		}
   </script>
 </head>
 <body>
     <input name="button" type="button" onClick="rec()" value="点击我，对成绩评价" />
     <input name="button" type="button" onClick="Wopen()" value="点击我，打开新窗口" / >
-    <input type="button" value="新窗口打开网站" onclick="openWindow()" /> 
+    <input type="button" value="新窗口打开网站" onclick="openWindow()" />
+    <h2 id="con">javascript</H2>
+    <p> JavaScript是一种基于对象、事件驱动的简单脚本语言，嵌入在HTML文档中，由浏览器负责解释和执行，在网页上产生动态的显示效果并实现与用户交互功能。</p>
+    <!--**************************************-->
+    <h3 id="con">I love JavaScript</h3>
+    <script type="text/javascript">
+    var mychar=document.getElementById("con");
+    document.write("原标题:"+mychar.innerHTML+"<br>"); //输出原h2标签内容
+    mychar.innerHTML="Hello world!"; //innerHTML的用法
+    document.write("修改后的标题:"+mychar.innerHTML); //输出修改后h2标签内容
+	//************************************************//
+	var mychar= document.getElementById("con");
+    mychar.style.color="red";
+    mychar.style.backgroundColor="#CCC";
+    mychar.style.width="300px";
+    </script> 
+    <!--****************************************-->
+    <p id="jsa">少侠你真帅！！！！！！！！</p> 
+    <form>
+       <input type="button" onclick="hidetext()" value="隐藏内容" /> 
+       <input type="button" onclick="showtext()" value="显示内容" /> 
+    </form>
 </body>
 </html>
